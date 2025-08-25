@@ -127,15 +127,15 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
                                   )
                   ),
 
-                  f7AccordionItem(title = "Save A Life Training", open=F,
+                  f7AccordionItem(title = "C.A.R.E.S Training", open=F,
                                   f7Block(br(),
-                                          f7Align(h3(strong("Suicide Prevention - Save a Life Training")), side=c("center")),
+                                          f7Align(h3(strong("Community Awareness in Resource Engagement and Suicide Prevention (C.A.R.E.S.) Training")), side=c("center")),
                                           hr(),
-                                          f7Align(h4("This module addresses myths related to suicide, barriers to well-being, and factors that increase a person’s risk for suicide. Participants who complete this training will be able to identify warning signs, relevant resources, and steps they can take to support a person they are concerned about."), side=c("center")),
+                                          f7Align(h4("As a member of the campus community, you play a key role in responding to mental health concerns and risk for suicide among our students. We appreciate you taking the time to complete this training program that will provide you with valuable information to assist you in responding to students in distress. What follows are 5 Modules that take less than 1 hour to complete."), side=c("center")),
                                           br(),
                                           hr(),
                                           f7Align(h3("Start the training now!"), side=c("center")),
-                                          f7Align(div(f7Link("Suicide Prevention - Save A Life Training", href="https://albany.az1.qualtrics.com/jfe/form/SV_9ZwaUUgd9OobdSC")), side=c("center")),
+                                          f7Align(div(f7Link("Community Awareness in Resource Engagement and Suicide Prevention (C.A.R.E.S.) Training", href="https://albany.az1.qualtrics.com/jfe/form/SV_4IxSrFhgxJnz2Dk")), side=c("center")),
                                           hr()
                                   )
                   ),
@@ -463,6 +463,7 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
         mod_Accordion_server('UrgentC', selector=selection, data=PMHdata(), title=c("EmUrgentCare at Colonie"),Visible = F)
         mod_Accordion_server('SAMARITAN', selector=selection, data=PMHdata(), title=c("Samaritan Hospital"),Visible = F)
         mod_Accordion_server('STPETERS', selector=selection, data=PMHdata(), title=c("St. Peter's Hospital"),Visible = F)
+        mod_Accordion_server('PMH_TimelyCare', selector=selection, data=PMHdata(), title = c('TimelyCare'), Visible = T)
 
         mod_info_server('SHS', selector=selection, data=PMHdata(), rownametitle=c("Student Health Services"), phone=T, website = T, email = F)
         mod_info_server('SCS', selector=selection, data=PMHdata(), rownametitle=c("Student Care Services"), phone=T, website = T, email = F)
@@ -474,6 +475,7 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
         mod_info_server('UrgentC',selector=selection, data=PMHdata(), rownametitle=c("EmUrgentCare at Colonie"), phone=T, website = T, email = F)
         mod_info_server('SAMARITAN',selector=selection, data=PMHdata(), rownametitle=c("Samaritan Hospital - Albany Memorial Campus"), phone=T, website = T, email = F)
         mod_info_server('STPETERS',selector=selection, data=PMHdata(), rownametitle=c("St. Peter's Hospital"), phone=T, website = T, email = F)
+        mod_info_server('PMH_TimelyCare', selector = selection, data = PMHdata(), rownametitle = c('TimelyCare'), phone = F, website = T, email = F)
 
 
         # Running/Physical Health Stuff
@@ -502,6 +504,7 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
         mod_Accordion_server('UrgentC', selector=selection, data=PMHdata(), title=c("EmUrgentCare at Colonie"),Visible = T)
         mod_Accordion_server('SAMARITAN', selector=selection, data=PMHdata(), title=c("Samaritan Hospital"),Visible = T)
         mod_Accordion_server('STPETERS', selector=selection, data=PMHdata(), title=c("St. Peter's Hospital"),Visible = T)
+        mod_Accordion_server('PMH_TimelyCare', selector=selection, data=PMHdata(), title = c('TimelyCare'), Visible = T)
 
         mod_info_server('SHS', selector=selection, data=PMHdata(), rownametitle=c("Student Health Services"), phone=T, website = T, email = F)
         mod_info_server('SCS', selector=selection, data=PMHdata(), rownametitle=c("Student Care Services"), phone=T, website = T, email = F)
@@ -513,6 +516,7 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
         mod_info_server('UrgentC',selector=selection, data=PMHdata(), rownametitle=c("EmUrgentCare at Colonie"), phone=T, website = T, email = F)
         mod_info_server('SAMARITAN',selector=selection, data=PMHdata(), rownametitle=c("Samaritan Hospital - Albany Memorial Campus"), phone=T, website = T, email = F)
         mod_info_server('STPETERS',selector=selection, data=PMHdata(), rownametitle=c("St. Peter's Hospital"), phone=T, website = T, email = F)
+        mod_info_server('PMH_TimelyCare', selector = selection, data = PMHdata(), rownametitle = c('TimelyCare'), phone = F, website = T, email = F)
 
 
         # Running/Physical Health Stuff

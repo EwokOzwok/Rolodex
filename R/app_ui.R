@@ -138,6 +138,7 @@ app_ui <- function(request) {
                                      f7Accordion(h4("Physical Health Resources"), multiCollapse = T,
                                                  mod_Accordion_ui('SHS'),
                                                  mod_Accordion_ui('SCS'),
+                                                 mod_Accordion_ui('PMH_TimelyCare'),
                                                  mod_Accordion_ui('SHAPE'),
                                                  mod_Accordion_ui('IOOV'),
                                                  mod_Accordion_ui('ELLIS'),
