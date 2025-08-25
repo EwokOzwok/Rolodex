@@ -127,19 +127,32 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
                                   )
                   ),
 
-
-                  f7AccordionItem(title = "C.A.R.E.S. training", open=F,
+                  f7AccordionItem(title = "Save A Life Training", open=F,
                                   f7Block(br(),
-                                          f7Align(h3(strong("Community Awareness in Resource Engagement and Suicide Prevention (C.A.R.E.S.) training")), side=c("center")),
+                                          f7Align(h3(strong("Suicide Prevention - Save a Life Training")), side=c("center")),
                                           hr(),
-                                          f7Align(h4("As a member of the campus community, you play a key role in responding to mental health concerns and risk for suicide among our students. We appreciate you taking the time to complete this training program that will provide you with valuable information to assist you in responding to students in distress. What follows are 5 Modules that take less than 1 hour to complete."), side=c("center")),
+                                          f7Align(h4("This module addresses myths related to suicide, barriers to well-being, and factors that increase a person’s risk for suicide. Participants who complete this training will be able to identify warning signs, relevant resources, and steps they can take to support a person they are concerned about."), side=c("center")),
                                           br(),
                                           hr(),
                                           f7Align(h3("Start the training now!"), side=c("center")),
-                                          f7Align(div(f7Link("Community Awareness in Resource Engagement and Suicide Prevention (C.A.R.E.S.) training", href="https://albany.az1.qualtrics.com/jfe/form/SV_4IxSrFhgxJnz2Dk")), side=c("center")),
+                                          f7Align(div(f7Link("Suicide Prevention - Save A Life Training", href="https://albany.az1.qualtrics.com/jfe/form/SV_9ZwaUUgd9OobdSC")), side=c("center")),
                                           hr()
                                   )
                   ),
+
+
+                  # f7AccordionItem(title = "New Training", open=F,
+                  #                 f7Block(br(),
+                  #                         f7Align(h3(strong("New Training Name")), side=c("center")),
+                  #                         hr(),
+                  #                         f7Align(h4("New Training Description"), side=c("center")),
+                  #                         br(),
+                  #                         hr(),
+                  #                         f7Align(h3("Start the training now!"), side=c("center")),
+                  #                         f7Align(div(f7Link("New Training Name", href="https://LinkToNewTraining.com")), side=c("center")),
+                  #                         hr()
+                  #                 )
+                  # ),
 
       )
     )
