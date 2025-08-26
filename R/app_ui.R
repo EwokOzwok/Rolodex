@@ -557,7 +557,7 @@ golem_add_external_resources <- function() {
           "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,"script","dataLayer","GTM-M39QN8M");</script>'),
 
-    HTML('<link rel="stylesheet" type="text/css" href="https://ewokozwok.github.io/Rolodex/www/shinyMobile2.0.1.min.css">'),
+    HTML('<link rel="stylesheet" type="text/css" href="https://ewokozwok.github.io/myexternalresources/shinyMobile2.0.1.min.css">'),
 
     # Fix Install button to Upper right of screen
     tags$style("
