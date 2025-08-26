@@ -34,7 +34,8 @@ mod_Accordion_server <- function(id, selector, title, data, Visible){
         tagList(
           f7AccordionItem(multiCollapse = F,f7Block(br(),
                                                     mod_info_ui(id),
-                                                    hr()
+                                                    br()
+                                                    # hr()
 
           ),
 

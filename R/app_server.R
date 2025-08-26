@@ -84,7 +84,7 @@ app_server <- function(input, output, session) {
                                           HTML('<center><iframe width="auto" height="auto" src="https://www.youtube.com/embed/mbkk2nPw8gY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>'),
                                           f7Align(div(f7Link(h3("Learn more about Project ACCESS"), href="https://www.albany.edu/education/research/behavioral-health-promotion#tab-project-access")),side=c("center")),
                                           f7Align(h6("DEVELOPED IN PART UNDER GRANT NUMBER 1H79SP082142-01 FROM THE SUBSTANCE ABUSE AND MENTAL HEALTH SERVICES ADMINISTRATION (SAMHSA) U.S. DEPARTMENT OF HEALTH AND HUMAN SERVICES (HHS)."), side=c("center")),
-                                          hr()
+                                          # hr()
                                   )
                   ),
 
@@ -105,7 +105,7 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
                                           f7Align(h2("Laura L. Longo, PhD"), side=c("center")),
                                           HTML('<center><img src="https://www.albany.edu/sites/default/files/styles/person_page_thumbnail/public/2023-02/Laura%20Longo.png?h=c4434bf3&itok=ookWO5g4" width=60%></center>'),
                                           h5("Laura M. Longo is a licensed psychologist, and a Senior Research Specialist for the Research Foundation for SUNY. Outside of the Center for Behavioral Health Promotion and Applied Research, Dr. Longo works in a private practice providing psychotherapy and evaluation services. Dr. Longo’s expertise is in the development, implementation, and evaluation of health communication campaigns, and prevention and early intervention services that address substance misuse and suicide prevention. Dr. Longo is passionate about understanding individual, sociocultural, and systemic factors that impact substance use, other areas of mental health, and recovery. Dr. Longo is a recovery ally and an avid social justice advocate."),
-                                          hr()
+                                          # hr()
                                   )
                   ),
 
@@ -136,7 +136,7 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
                                           hr(),
                                           f7Align(h3("Start the training now!"), side=c("center")),
                                           f7Align(div(f7Link("Community Awareness in Resource Engagement and Suicide Prevention (C.A.R.E.S.) Training", href="https://albany.az1.qualtrics.com/jfe/form/SV_4IxSrFhgxJnz2Dk")), side=c("center")),
-                                          hr()
+                                          # hr()
                                   )
                   ),
 
@@ -168,7 +168,7 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
                                           br(),
                                           HTML('<center><iframe width="auto" height="auto" src="https://www.youtube.com/embed/PyGk5kYbU-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>'),
                                           br(),
-                                          hr()
+                                          # hr()
                                   )
                   ),
 
@@ -180,7 +180,7 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
                                           br(),
                                           HTML('<center><iframe width="auto" height="auto" src="https://www.youtube.com/embed/4skME5hVoig?si=zmn2UMQVUwkxX28v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>'),
                                           br(),
-                                          hr()
+                                          # hr()
                                   )
                   ),
 
@@ -191,7 +191,7 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
                                           br(),
                                           HTML('<center><iframe width="auto" height="auto" src="https://www.youtube.com/embed/iUj-M1mcNUM?si=ULOZZiBMhiX-1xCS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>'),
                                           br(),
-                                          hr()
+                                          # hr()
                                   )
                   ),
       )
