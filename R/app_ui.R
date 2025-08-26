@@ -44,7 +44,6 @@ app_ui <- function(request) {
                 hover = TRUE,
                 f7Card(title="What is Project ACCESS?",
                        uiOutput("welcome"),
-                       h2("THIS IS SOME TESTING GOING ON"),
                        hairlines = F, strong = T, inset =
                          F, tablet = FALSE))),
             f7Block(
