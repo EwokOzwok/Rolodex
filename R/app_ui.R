@@ -192,7 +192,8 @@ app_ui <- function(request) {
                                                  mod_Accordion_ui('POCagainstsuicide'),
                                                  mod_Accordion_ui('Qttoc'),
                                                  mod_Accordion_ui('TherapyBlackGirls'),
-                                                 mod_Accordion_ui('TherapyBlackMen')
+                                                 mod_Accordion_ui('TherapyBlackMen'),
+                                                 mod_Accordion_ui('BCMH_TimelyCare')
                                      )),
 
 
