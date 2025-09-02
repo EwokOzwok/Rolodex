@@ -476,9 +476,10 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
         mod_info_server('SAMARITAN',selector=selection, data=PMHdata(), rownametitle=c("Samaritan Hospital - Albany Memorial Campus"), phone=T, website = T, email = F)
         mod_info_server('STPETERS',selector=selection, data=PMHdata(), rownametitle=c("St. Peter's Hospital"), phone=T, website = T, email = F)
         mod_info_server('PMH_TimelyCare', selector = selection, data = PMHdata(), rownametitle = c('TimelyCare'), phone = F, website = T, email = F)
+        mod_Accordion_server('211_NE_PMH', selector=selection, data=PMHdata(), title = c('211 Northeast Region'), Visible = T)
+        mod_info_server('211_NE_PMH', selector = selection, data = PMHdata(), rownametitle = c('211 Northeast Region'), phone = T, website = T, email = F)
 
-
-        # Running/Physical Health Stuff
+         # Running/Physical Health Stuff
         mod_Accordion_server('FHF_BlackGirlsRun', selector=selection, data=PMHdata(), title = c('Black Girls Run'), Visible = F)
         mod_info_server('FHF_BlackGirlsRun', selector = selection, data = PMHdata(), rownametitle = c('Black Girls Run'), phone = F, website = T, email = F)
         mod_Accordion_server('FHF_CapCityRunners', selector=selection, data=PMHdata(), title = c('Cap City Runners'), Visible = F)
@@ -491,9 +492,12 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
         mod_info_server('FHF_CapCityRescue', selector = selection, data = PMHdata(), rownametitle = c('Capital City Rescue Mission'), phone = T, website = T, email = F)
         mod_Accordion_server('PMH_RISSE', selector=selection, data=PMHdata(), title = c('RISSE (Refgeee and Immigrant Support Services of Emmaus)'), Visible = F)
         mod_info_server('PMH_RISSE', selector = selection, data = PMHdata(), rownametitle = c('RISSE (Refgeee and Immigrant Support Services of Emmaus)'), phone = T, website = T, email = F)
+        mod_Accordion_server('CDPHP_CYCLING', selector=selection, data=PMHdata(), title = c('CDPHP Cycle'), Visible = T)
+        mod_info_server('CDPHP_CYCLING', selector = selection, data = PMHdata(), rownametitle = c('CDPHP Cycle'), phone = T, website = T, email = T)
+        mod_Accordion_server('211_NE_PMH', selector=selection, data=PMHdata(), title = c('211 Northeast Region'), Visible = T)
+        mod_info_server('211_NE_PMH', selector = selection, data = PMHdata(), rownametitle = c('211 Northeast Region'), phone = T, website = T, email = F)
 
-
-      } else {
+        } else {
         mod_Accordion_server('SHS', selector=selection, data=PMHdata(), title=c("Student Health Services"),Visible = T)
         mod_Accordion_server('SCS', selector=selection, data=PMHdata(), title=c("Student Care Services"),Visible = T)
         mod_Accordion_server('IOOV', selector=selection, data=PMHdata(), title=c("In Our Own Voices"),Visible = T)
@@ -534,8 +538,8 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
         mod_Accordion_server('PMH_RISSE', selector=selection, data=PMHdata(), title = c('RISSE (Refgeee and Immigrant Support Services of Emmaus)'), Visible = T)
         mod_info_server('PMH_RISSE', selector = selection, data = PMHdata(), rownametitle = c('RISSE (Refgeee and Immigrant Support Services of Emmaus)'), phone = T, website = T, email = F)
 
-
-
+        mod_Accordion_server('CDPHP_CYCLING', selector=selection, data=PMHdata(), title = c('CDPHP Cycle'), Visible = T)
+        mod_info_server('CDPHP_CYCLING', selector = selection, data = PMHdata(), rownametitle = c('CDPHP Cycle'), phone = T, website = T, email = T)
 
       }
     })
@@ -562,12 +566,19 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
           mod_Accordion_server('Mhpsychtoday', selector=selection, data=MHdata(), title=c("Find a Therapist (Psych Today)"),Visible = F)
 
 
+
           mod_info_server('Mhcaps',selector=selection, data=MHdata(), rownametitle=c("Counseling and Psychological Services Center (CAPS)"), phone=T, website = T, email = F)
           mod_info_server('Mhmiddleearth',selector=selection, data=MHdata(), rownametitle=c("Middle Earth"), phone=T, website = T, email = F)
           mod_info_server('MHprideCenter',selector=selection, data=MHdata(), rownametitle=c("Pride Center of the Capital Region"), phone=T, website = T, email = F)
           mod_info_server('MHsuicideFound',selector=selection, data=MHdata(), rownametitle=c("American Foundation for Suicide Prevention Capital Region"), phone=T, website = T, email = F)
           mod_info_server('Mhnyspa',selector=selection, data=MHdata(), rownametitle=c("Find a Psychologist (NYSPA)"), phone=F, website = T, email = F)
           mod_info_server('Mhpsychtoday',selector=selection, data=MHdata(), rownametitle=c("Find a Therapist (Psych Today)"), phone=F, website = T, email = F)
+
+
+          mod_Accordion_server('211_NE_MH', selector=selection, data=MHdata(), title = c('211 Northeast Region'), Visible = F)
+          mod_info_server('211_NE_MH', selector = selection, data = MHdata(), rownametitle = c('211 Northeast Region'), phone = T, website = T, email = F)
+          mod_Accordion_server('MH_TimelyCare', selector=selection, data=MHdata(), title = c('TimelyCare'), Visible = T)
+          mod_info_server('MH_TimelyCare', selector = selection, data = MHdata(), rownametitle = c('TimelyCare'), phone = F, website = T, email = F)
           mod_Accordion_server('MH_SuicideLifeline', selector=selection, data=MHdata(), title = c('(988) National Suicide & Crisis Lifeline'), Visible = F)
           mod_info_server('MH_SuicideLifeline', selector = selection, data = MHdata(), rownametitle = c('(988) National Suicide & Crisis Lifeline'), phone = T, website = T, email = F)
           mod_Accordion_server('MH_CHAMP', selector=selection, data=MHdata(), title = c('CHAMP Program (OASAS)'), Visible = F)
@@ -601,7 +612,8 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
           mod_Accordion_server('MH_RISSE', selector=selection, data=MHdata(), title = c('RISSE (Refgeee and Immigrant Support Services of Emmaus)'), Visible = T)
           mod_info_server('MH_RISSE', selector = selection, data = MHdata(), rownametitle = c('RISSE (Refgeee and Immigrant Support Services of Emmaus)'), phone = T, website = T, email = F)
 
-
+          mod_Accordion_server('211_NE_MH', selector=selection, data=MHdata(), title = c('211 Northeast Region'), Visible = T)
+          mod_info_server('211_NE_MH', selector = selection, data = MHdata(), rownametitle = c('211 Northeast Region'), phone = T, website = T, email = F)
 
         }
       })
@@ -648,7 +660,8 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
       mod_info_server('MHBC_CHAMP', selector = selection, data = MHBC(), rownametitle = c('CHAMP Program (OASAS)'), phone = T, website = T, email = F)
       mod_Accordion_server('BCMH_TimelyCare', selector=selection, data=MHBC(), title = c('TimelyCare'), Visible = T)
       mod_info_server('BCMH_TimelyCare', selector = selection, data = MHBC(), rownametitle = c('TimelyCare'), phone = F, website = T, email = F)
-
+      mod_Accordion_server('211_NE_MHBC', selector=selection, data= MHBC(), title = c('211 Northeast Region'), Visible = T)
+      mod_info_server('211_NE_MHBC', selector = selection, data = MHBC(), rownametitle = c('211 Northeast Region'), phone = T, website = T, email = F)
 
 }
 
@@ -703,12 +716,13 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
       mod_info_server('MHLC_SuicideLifeline', selector = selection, data = MHLC(), rownametitle = c('(988) National Suicide & Crisis Lifeline'), phone = T, website = T, email = F)
       mod_Accordion_server('MHLC_CHAMP', selector=selection, data=MHLC(), title = c('CHAMP Program (OASAS)'), Visible = T)
       mod_info_server('MHLC_CHAMP', selector = selection, data = MHLC(), rownametitle = c('CHAMP Program (OASAS)'), phone = T, website = T, email = F)
+      mod_Accordion_server('MHLC_TimelyCare', selector=selection, data=MHLC(), title = c('TimelyCare'), Visible = T)
+      mod_info_server('MHLC_TimelyCare', selector = selection, data = MHLC(), rownametitle = c('TimelyCare'), phone = F, website = T, email = F)
+      mod_Accordion_server('211_NE_MHLC', selector=selection, data=MHLC(), title = c('211 Northeast Region'), Visible = T)
+      mod_info_server('211_NE_MHLC', selector = selection, data = MHLC(), rownametitle = c('211 Northeast Region'), phone = T, website = T, email = F)
 
 
-    }
-
-
-
+}
 
 
 
@@ -973,7 +987,8 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
           mod_info_server('AOD_CHAMP', selector = selection, data = AODdata(), rownametitle = c('CHAMP Program (OASAS)'), phone = T, website = T, email = F)
           mod_Accordion_server('AOD_St. Peters Addiction Recovery', selector=selection, data=AODdata(), title = c('St. Peters Addiction Recovery'), Visible = F)
           mod_info_server('AOD_St. Peters Addiction Recovery', selector = selection, data = AODdata(), rownametitle = c('St. Peters Addiction Recovery'), phone = T, website = T, email = F)
-
+          mod_Accordion_server('AOD_Safe Medical Disposal Locations', selector=selection, data=AODdata(), title = c('Safe Medical Disposal Locations'), Visible = T)
+          mod_info_server('AOD_Safe Medical Disposal Locations', selector = selection, data = AODdata(), rownametitle = c('Safe Medical Disposal Locations'), phone = F, website = T, email = F)
 
 
 
@@ -1092,8 +1107,10 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
       mod_info_server('Aca_BrainFuse', selector = selection, data = Acadata(), rownametitle = c('BrainFuse'), phone = F, website = T, email = F)
       mod_Accordion_server('Aca_PIE', selector=selection, data=Acadata(), title = c('Pathways Into Education Center (PIE Center)'), Visible = T)
       mod_info_server('Aca_PIE', selector = selection, data = Acadata(), rownametitle = c('Pathways Into Education Center (PIE Center)'), phone = T, website = T, email = F)
-
-
+      mod_Accordion_server('Aca_SuccessCoaching', selector=selection, data=Acadata(), title = c('Academic Success Coaching'), Visible = T)
+      mod_info_server('Aca_SuccessCoaching', selector = selection, data = Acadata(), rownametitle = c('Academic Success Coaching'), phone = F, website = T, email = F)
+      mod_Accordion_server('PASS_MENTORING', selector=selection, data=Acadata(), title = c('Peer-Assisted Student Success (PASS) mentoring'), Visible = T)
+      mod_info_server('PASS_MENTORING', selector = selection, data = Acadata(), rownametitle = c('Peer-Assisted Student Success (PASS) mentoring'), phone = T, website = T, email = T)
     }
 
     # International Student Resources --------------------------------------------
@@ -1154,6 +1171,8 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
       mod_Accordion_server('FHF_OffCampusSNAP', selector=selection, data=FHFdata(), title = c('Off-campus Food Assistance'), Visible = T)
       mod_info_server('FHF_OffCampusSNAP', selector = selection, data = FHFdata(), rownametitle = c('Off-campus Food Assistance'), phone = F, website = T, email = F)
 
+      mod_Accordion_server('211_NE_FHF', selector=selection, data=FHFdata(), title = c('211 Northeast Region'), Visible = T)
+      mod_info_server('211_NE_FHF', selector = selection, data = FHFdata(), rownametitle = c('211 Northeast Region'), phone = T, website = T, email = F)
 
       mod_info_server('UAemergencyFund', selector = selection, data = FHFdata(), rownametitle = c('UAlbany Student Emergency Fund'), phone = T, website = T, email = F)
       mod_Accordion_server('FHF_The Food Pantries Food Connect Map', selector=selection, data=FHFdata(), title = c('The Food Pantries Food Connect Map'), Visible = T)
@@ -1265,12 +1284,11 @@ Dr. Martin’s research expertise is in substance use and other health-risk beha
 
 
 
-
-
-  })
-
-
-
-
+})
 
 }
+
+
+
+
+

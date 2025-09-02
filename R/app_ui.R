@@ -151,7 +151,9 @@ app_ui <- function(request) {
                                                  mod_Accordion_ui('FHF_CapCityRunners'),
                                                  mod_Accordion_ui('FHF_PaceHappinessRunClub'),
                                                  mod_Accordion_ui('FHF_AlbRunExchange'),
-                                                 mod_Accordion_ui('PMH_RISSE')
+                                                 mod_Accordion_ui('PMH_RISSE'),
+                                                 mod_Accordion_ui('CDPHP_CYCLING'),
+                                                 mod_Accordion_ui('211_NE_PMH')
 
                                      )),
 
@@ -170,7 +172,9 @@ app_ui <- function(request) {
                                                  mod_Accordion_ui('Mhpsychtoday'),
                                                  mod_Accordion_ui('MHprideCenter'),
                                                  mod_Accordion_ui('MHsuicideFound'),
-                                                 mod_Accordion_ui('MH_RISSE')
+                                                 mod_Accordion_ui('MH_RISSE'),
+                                                 mod_Accordion_ui('MH_TimelyCare'),
+                                                 mod_Accordion_ui('211_NE_MH'),
 
                                      )),
 
@@ -193,7 +197,8 @@ app_ui <- function(request) {
                                                  mod_Accordion_ui('Qttoc'),
                                                  mod_Accordion_ui('TherapyBlackGirls'),
                                                  mod_Accordion_ui('TherapyBlackMen'),
-                                                 mod_Accordion_ui('BCMH_TimelyCare')
+                                                 mod_Accordion_ui('BCMH_TimelyCare'),
+                                                 mod_Accordion_ui('211_NE_MHBC'),
                                      )),
 
 
@@ -212,7 +217,9 @@ app_ui <- function(request) {
                                                  mod_Accordion_ui('NatlAllianceHispHealth'),
                                                  mod_Accordion_ui('LatinxPsychAssociation'),
                                                  mod_Accordion_ui('MHLCpocagainstsuicide'),
-                                                 mod_Accordion_ui('MHLCqtTherapistsofColor')
+                                                 mod_Accordion_ui('MHLCqtTherapistsofColor'),
+                                                 mod_Accordion_ui('MHLC_TimelyCare'),
+                                                 mod_Accordion_ui('211_NE_MHLC'),
                                      )),
 
 # LGBTQ+ Resources --------------------------------------------------------
@@ -299,7 +306,8 @@ conditionalPanel("input.PMHselector == 'Interpartner Violence'",
                                                  mod_Accordion_ui('AOD_Equinox'),
                                                  mod_Accordion_ui('AOD_St. Peters Addiction Recovery'),
                                                  mod_Accordion_ui('AOD_ACCAlbany'),
-                                                 mod_Accordion_ui('AOD_OASASlocator')
+                                                 mod_Accordion_ui('AOD_OASASlocator'),
+                                                 mod_Accordion_ui('AOD_Safe Medical Disposal Locations'),
                                      )),
 
 
@@ -338,7 +346,9 @@ conditionalPanel("input.PMHselector == 'Interpartner Violence'",
                                                  mod_Accordion_ui('ACA_SummerResearch'),
                                                  mod_Accordion_ui('Aca_CURCE'),
                                                  mod_Accordion_ui('Aca_International Student and Scholar Services'),
-                                                 mod_Accordion_ui('Aca_ICA')
+                                                 mod_Accordion_ui('Aca_ICA'),
+                                                 mod_Accordion_ui('Aca_SuccessCoaching'),
+                                                 mod_Accordion_ui('PASS_MENTORING'),
                                      )),
 
 
@@ -348,7 +358,8 @@ conditionalPanel("input.PMHselector == 'Interpartner Violence'",
                                      f7Accordion(h4("International Student Resources"), multiCollapse = T,
                                                  mod_Accordion_ui('INTNL_ISSS'),
                                                  mod_Accordion_ui('INTNL_ICA'),
-                                                 mod_Accordion_ui('INTNL_RISSE')
+                                                 mod_Accordion_ui('INTNL_RISSE'),
+
                                      )),
 
 # Food, Housing, Financial ------------------------------------------------
@@ -370,7 +381,8 @@ conditionalPanel("input.PMHselector == 'Interpartner Violence'",
                                                  mod_Accordion_ui('FHF_VincdepaulFoodPantry'),
                                                  mod_Accordion_ui('FHF_CapRegionCommResource'),
                                                  mod_Accordion_ui('FHF_WERC'),
-                                                 mod_Accordion_ui('FHF_RISSE')
+                                                 mod_Accordion_ui('FHF_RISSE'),
+                                                 mod_Accordion_ui('211_NE_FHF')
 
                                      )),
 
@@ -401,7 +413,8 @@ conditionalPanel("input.PMHselector == 'Interpartner Violence'",
                                                  mod_Accordion_ui('HL_RAINN'),
                                                  mod_Accordion_ui('HL_SmokersQuit'),
                                                  mod_Accordion_ui('HL_NYSgamb'),
-                                                 mod_Accordion_ui('HL_NtnlGAMB')
+                                                 mod_Accordion_ui('HL_NtnlGAMB'),
+                                                 mod_Accordion_ui('211_NE')
                                      )),
                     br(),
 
