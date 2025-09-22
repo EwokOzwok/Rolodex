@@ -91,30 +91,33 @@ app_ui <- function(request) {
                 intensity = 5,
                 hover = TRUE,
                 f7Card(title = "Select a resource category below",
-                       f7Block(f7SmartSelect("PMHselector", NULL, type = c("popup"), choices=c("Physical Health",
-                                                                                               "Mental Health (MH)",
-                                                                                               "MH Resources (Black Communities)",
-                                                                                               "MH Resources (Hispanic Communities)",
-                                                                                               "LGBTQ+ Resources",
-                                                                                               "Sexual Health",
-                                                                                               "Interpartner Violence",
-                                                                                               "Sexual Violence Related",
-                                                                                               "Alcohol and Other Drugs",
-                                                                                               "Problem Gambling",
-                                                                                               "Academic Resources",
-                                                                                               "International Student Resources",
-                                                                                               "Food, Housing, & Financial",
-                                                                                               "Legal Resources",
-                                                                                               "Hotlines"),
-                                             selected=NULL, class = "select smart"),
+                       f7Block(
+                         uiOutput("selector"),
+                         # f7SmartSelect("PMHselector", NULL, type = c("popup"), choices=c("Physical Health",
+                         #                                                                       "Mental Health (MH)",
+                         #                                                                       "MH Resources (Black Communities)",
+                         #                                                                       "MH Resources (Hispanic Communities)",
+                         #                                                                       "LGBTQ+ Resources",
+                         #                                                                       "Sexual Health",
+                         #                                                                       "Interpartner Violence",
+                         #                                                                       "Sexual Violence Related",
+                         #                                                                       "Alcohol and Other Drugs",
+                         #                                                                       "Problem Gambling",
+                         #                                                                       "Academic Resources",
+                         #                                                                       "International Student Resources",
+                         #                                                                       "Food, Housing, & Financial",
+                         #                                                                       "Legal Resources",
+                         #                                                                       "Hotlines"),
+                         #                     selected=NULL, class = "select smart"),
 
-                               conditionalPanel("input.PMHselector != 'Community Specific Resources'
-                                 & input.PMHselector != 'MH Resources (Black Communities)'
-                                 & input.PMHselector != 'MH Resources (Hispanic Communities)'
-                                 & input.PMHselector != 'Academic Resources'
-                                 & input.PMHselector != 'Problem Gambling'
-                                 & input.PMHselector != 'Food, Housing, & Financial'
-                                 & input.PMHselector != 'Hotlines'" ,f7Toggle("OffCampus", "Show Off-Campus Resources", checked=F, color=NULL))),
+                               # conditionalPanel("input.PMHselector != 'Community Specific Resources'
+                               #   & input.PMHselector != 'MH Resources (Black Communities)'
+                               #   & input.PMHselector != 'MH Resources (Hispanic Communities)'
+                               #   & input.PMHselector != 'Academic Resources'
+                               #   & input.PMHselector != 'Problem Gambling'
+                               #   & input.PMHselector != 'Food, Housing, & Financial'
+                               #   & input.PMHselector != 'Hotlines'" ,f7Toggle("OffCampus", "Show Off-Campus Resources", checked=F, color=NULL))
+                         ),
                        br(),
                        br()
 
@@ -126,302 +129,25 @@ app_ui <- function(request) {
                 )
               ),
 
-# Physical Health ---------------------------------------------------------
+# All Acordions ---------------------------------------------------------
 
+          f7Card(
+            f7Block(
+              uiOutput("selector"),
+              uiOutput("offcampus_toggle"),
+              strong = T, inset = T, tablet = FALSE)),
 
-              f7Shadow(
-                intensity = 5,
-                hover = TRUE,
-                f7Card(
-                  f7Block(
-                    conditionalPanel("input.PMHselector == 'Physical Health'",
-                                     f7Accordion(h4("Physical Health Resources"), multiCollapse = T,
-                                                 mod_Accordion_ui('SHS'),
-                                                 mod_Accordion_ui('SCS'),
-                                                 mod_Accordion_ui('PMH_TimelyCare'),
-                                                 mod_Accordion_ui('SHAPE'),
-                                                 mod_Accordion_ui('IOOV'),
-                                                 mod_Accordion_ui('ELLIS'),
-                                                 mod_Accordion_ui('AMC'),
-                                                 mod_Accordion_ui('AMCwash'),
-                                                 mod_Accordion_ui('UrgentC'),
-                                                 mod_Accordion_ui('SAMARITAN'),
-                                                 mod_Accordion_ui('STPETERS'),
-                                                 mod_Accordion_ui('FHF_BlackGirlsRun'),
-                                                 mod_Accordion_ui('FHF_CapCityRunners'),
-                                                 mod_Accordion_ui('FHF_PaceHappinessRunClub'),
-                                                 mod_Accordion_ui('FHF_AlbRunExchange'),
-                                                 mod_Accordion_ui('PMH_RISSE'),
-                                                 mod_Accordion_ui('CDPHP_CYCLING'),
-                                                 mod_Accordion_ui('211_NE_PMH')
 
-                                     )),
+          f7Card(
+            f7Block(
+              uiOutput("accordions"),
+              strong = T, inset = T, tablet = FALSE)),
 
 
-# Mental Health -----------------------------------------------------------
 
 
-                    conditionalPanel("input.PMHselector == 'Mental Health (MH)'",
-                                     f7Accordion(h4("Mental Health Resources"), multiCollapse = T,
-                                                 mod_Accordion_ui('Mhcaps'),
-                                                 mod_Accordion_ui('MH_PSC'),
-                                                 mod_Accordion_ui('Mhmiddleearth'),
-                                                 mod_Accordion_ui('MH_SuicideLifeline'),
-                                                 mod_Accordion_ui('Mhnyspa'),
-                                                 mod_Accordion_ui('MH_CHAMP'),
-                                                 mod_Accordion_ui('Mhpsychtoday'),
-                                                 mod_Accordion_ui('MHprideCenter'),
-                                                 mod_Accordion_ui('MHsuicideFound'),
-                                                 mod_Accordion_ui('MH_RISSE'),
-                                                 mod_Accordion_ui('MH_TimelyCare'),
-                                                 mod_Accordion_ui('211_NE_MH'),
 
-                                     )),
 
-
-# Mental Health for Black Communities -------------------------------------
-
-
-                    conditionalPanel("input.PMHselector == 'MH Resources (Black Communities)'",
-                                     f7Accordion(h4("Mental Health Resources for Black Communities"), multiCollapse = T,
-                                                 mod_Accordion_ui('MHBC_CHAMP'),
-                                                 mod_Accordion_ui('akkoma'),
-                                                 mod_Accordion_ui('MHBC_SuicideLifeline'),
-                                                 mod_Accordion_ui('BEAM'),
-                                                 mod_Accordion_ui('BLHF'),
-                                                 mod_Accordion_ui('BROMM'),
-                                                 mod_Accordion_ui('MHBCinsclusivetherapists'),
-                                                 mod_Accordion_ui('Loveland'),
-                                                 mod_Accordion_ui('MalaninandMH'),
-                                                 mod_Accordion_ui('POCagainstsuicide'),
-                                                 mod_Accordion_ui('Qttoc'),
-                                                 mod_Accordion_ui('TherapyBlackGirls'),
-                                                 mod_Accordion_ui('TherapyBlackMen'),
-                                                 mod_Accordion_ui('BCMH_TimelyCare'),
-                                                 mod_Accordion_ui('211_NE_MHBC'),
-                                     )),
-
-
-# Mental Health for Hispanic Communities ----------------------------------
-
-
-                    conditionalPanel("input.PMHselector == 'MH Resources (Hispanic Communities)'",
-                                     f7Accordion(h4("Mental Health Resources for Hispanic Communities"), multiCollapse = T,
-                                                 mod_Accordion_ui('MHLC_CHAMP'),
-                                                 mod_Accordion_ui('CDLatinos'),
-                                                 mod_Accordion_ui('MHLC_SuicideLifeline'),
-                                                 mod_Accordion_ui('MHLCInclusiveTherapists'),
-                                                 mod_Accordion_ui('LifeisPrecious'),
-                                                 mod_Accordion_ui('LatinXtherapy'),
-                                                 mod_Accordion_ui('NatnlLatinaOrg'),
-                                                 mod_Accordion_ui('NatlAllianceHispHealth'),
-                                                 mod_Accordion_ui('LatinxPsychAssociation'),
-                                                 mod_Accordion_ui('MHLCpocagainstsuicide'),
-                                                 mod_Accordion_ui('MHLCqtTherapistsofColor'),
-                                                 mod_Accordion_ui('MHLC_TimelyCare'),
-                                                 mod_Accordion_ui('211_NE_MHLC'),
-                                     )),
-
-# LGBTQ+ Resources --------------------------------------------------------
-
-
-                    conditionalPanel("input.PMHselector == 'LGBTQ+ Resources'",
-                                     f7Accordion(h4("LGBTQ+ Resources"), multiCollapse = F,
-                                                 mod_Accordion_ui('LGB_SHAPE'),
-                                                 mod_Accordion_ui('LGB_StudentLegal'),
-                                                 mod_Accordion_ui('LGBTQ_TrevorProject'),
-                                                 mod_Accordion_ui('LGB_pridecenter'),
-                                                 mod_Accordion_ui('LBG_IOOV'),
-                                                 mod_Accordion_ui('LGB_APH'),
-                                                 mod_Accordion_ui('LGB_DamienCenter'),
-                                                 mod_Accordion_ui('LGB_UHPP'),
-                                                 mod_Accordion_ui('LGB_InclusiveTherapists'),
-                                                 mod_Accordion_ui('LGB_Qttherapistsofcolor'),
-                                                 mod_Accordion_ui('LGB_LegalAIDNENY'),
-                                                 mod_Accordion_ui('LGBTQ_SuicideLifeline')
-
-                                     )),
-
-# Sexual Health  ----------------------------------------------------------
-
-
-
-                    conditionalPanel("input.PMHselector == 'Sexual Health'",
-                                     f7Accordion(h4("Sexual Health"), multiCollapse = T,
-                                                 mod_Accordion_ui('SH_SHS'),
-                                                 mod_Accordion_ui('SH_AMC'),
-                                                 mod_Accordion_ui('SH_APH'),
-                                                 mod_Accordion_ui('SH_DamienCenter'),
-                                                 mod_Accordion_ui('SH_UHPP'),
-                                                 mod_Accordion_ui('SH_PrideCenter'),
-                                                 mod_Accordion_ui('SH_WYH')
-                                     )),
-
-# Sexual Violence ---------------------------------------------------------
-
-
-
-                    conditionalPanel("input.PMHselector == 'Sexual Violence Related'",
-                                     f7Accordion(h4("Sexual Violence Related"), multiCollapse = T,
-                                                 mod_Accordion_ui('SV_SLS'),
-                                                 mod_Accordion_ui('SV_SVsupportAdvocacy'),
-                                                 mod_Accordion_ui('SV_24hrSexualAssaultHotline'),
-                                                 mod_Accordion_ui('SV_RAINN'),
-                                                 mod_Accordion_ui('SV_Svcenter'),
-                                                 mod_Accordion_ui('SV_TittleIX'),
-                                                 mod_Accordion_ui('SV_SAFEKits')
-
-                                     )),
-
-
-
-
-# IPV ---------------------------------------------------------------------
-
-
-conditionalPanel("input.PMHselector == 'Interpartner Violence'",
-                 f7Accordion(h4("Interpartner Violence"), multiCollapse = T,
-                             mod_Accordion_ui('IPV_Equinox'),
-                             mod_Accordion_ui('IPV_Office of Health Promotion'),
-                             mod_Accordion_ui('IPV_Crime Victim and Sexual Violence Center')
-                 )),
-
-
-# AOD ---------------------------------------------------------------------
-
-
-                    conditionalPanel("input.PMHselector == 'Alcohol and Other Drugs'",
-                                     f7Accordion(h4("Alcohol and Other Drugs"), multiCollapse = T,
-                                                 mod_Accordion_ui('AOD_OHP'),
-                                                 mod_Accordion_ui('AOD_CHAMP'),
-                                                 mod_Accordion_ui('AOD_NYSQuitline'),
-                                                 mod_Accordion_ui('AOD_CampusDrugPrevINDEX'),
-                                                 mod_Accordion_ui('AOD_NUA'),
-                                                 mod_Accordion_ui('AOD_NUAspanish'),
-                                                 mod_Accordion_ui('AOD_BraveAPP'),
-                                                 mod_Accordion_ui('AOD_NaloxoneCal'),
-                                                 mod_Accordion_ui('AOD_SMART'),
-                                                 mod_Accordion_ui('AOD_Refuge'),
-                                                 mod_Accordion_ui('AOD_Aameetings'),
-                                                 mod_Accordion_ui('AOD_Equinox'),
-                                                 mod_Accordion_ui('AOD_St. Peters Addiction Recovery'),
-                                                 mod_Accordion_ui('AOD_ACCAlbany'),
-                                                 mod_Accordion_ui('AOD_OASASlocator'),
-                                                 mod_Accordion_ui('AOD_Safe Medical Disposal Locations'),
-                                     )),
-
-
-# Problem Gambling --------------------------------------------------------
-
-
-                    conditionalPanel("input.PMHselector == 'Problem Gambling'",
-                                     f7Accordion(h4("Problem Gambling"), multiCollapse = T,
-                                                 mod_Accordion_ui('GAMB_NYSmainwebsite'),
-                                                 mod_Accordion_ui('GAMB_Escreener'),
-                                                 mod_Accordion_ui('GAMB_NYShotline'),
-                                                 mod_Accordion_ui('GAMB_GamFin'),
-                                                 mod_Accordion_ui('GAMB_NtnlHotline'),
-                                                 mod_Accordion_ui('GAMB_gambAnonymous'),
-                                                 mod_Accordion_ui('GAMB_gambAnon'),
-                                                 mod_Accordion_ui('GAMB_TxtLocator'),
-                                                 mod_Accordion_ui('GAMB_Knowtheodds')
-                                     )),
-
-
-# Academic Resources ------------------------------------------------------
-
-
-                    conditionalPanel("input.PMHselector == 'Academic Resources'",
-                                     f7Accordion(h4("Academic Resources"), multiCollapse = T,
-                                                 mod_Accordion_ui('ACA_DOS'),
-                                                 mod_Accordion_ui('ACA_lib'),
-                                                 mod_Accordion_ui('ACA_CareerServices'),
-                                                 mod_Accordion_ui('Aca_PIE'),
-                                                 mod_Accordion_ui('ACA_DAISS'),
-                                                 mod_Accordion_ui('ACA_Writing'),
-                                                 mod_Accordion_ui('ACA_Tutoring'),
-                                                 mod_Accordion_ui('Aca_BrainFuse'),
-                                                 mod_Accordion_ui('ACA_Excel'),
-                                                 mod_Accordion_ui('ACA_CSTEP'),
-                                                 mod_Accordion_ui('ACA_SummerResearch'),
-                                                 mod_Accordion_ui('Aca_CURCE'),
-                                                 mod_Accordion_ui('Aca_International Student and Scholar Services'),
-                                                 mod_Accordion_ui('Aca_ICA'),
-                                                 mod_Accordion_ui('Aca_SuccessCoaching'),
-                                                 mod_Accordion_ui('PASS_MENTORING'),
-                                     )),
-
-
-# International Student Resources -----------------------------------------
-
-                    conditionalPanel("input.PMHselector == 'International Student Resources'",
-                                     f7Accordion(h4("International Student Resources"), multiCollapse = T,
-                                                 mod_Accordion_ui('INTNL_ISSS'),
-                                                 mod_Accordion_ui('INTNL_ICA'),
-                                                 mod_Accordion_ui('INTNL_RISSE'),
-
-                                     )),
-
-# Food, Housing, Financial ------------------------------------------------
-
-
-                    conditionalPanel("input.PMHselector == 'Food, Housing, & Financial'",
-                                     f7Accordion(h4("Food, Housing, & Financial"), multiCollapse = T,
-                                                 mod_Accordion_ui('FAO'),
-                                                 mod_Accordion_ui('PurplePantry'),
-                                                 mod_Accordion_ui('PurpleThreads'),
-                                                 mod_Accordion_ui('FHF_SNAP'),
-                                                 mod_Accordion_ui('FHF_SSS'),
-                                                 mod_Accordion_ui('FHF_HomelessnessLiason'),
-                                                 mod_Accordion_ui('FHF_OffCampusSNAP'),
-                                                 mod_Accordion_ui('UAemergencyFund'),
-                                                 mod_Accordion_ui('FHF_The Food Pantries Food Connect Map'),
-                                                 mod_Accordion_ui('FHF_Capital Roots'),
-                                                 mod_Accordion_ui('FHF_CapCityRescue'),
-                                                 mod_Accordion_ui('FHF_VincdepaulFoodPantry'),
-                                                 mod_Accordion_ui('FHF_CapRegionCommResource'),
-                                                 mod_Accordion_ui('FHF_WERC'),
-                                                 mod_Accordion_ui('FHF_RISSE'),
-                                                 mod_Accordion_ui('211_NE_FHF')
-
-                                     )),
-
-# Legal -------------------------------------------------------------------
-
-
-                    conditionalPanel("input.PMHselector == 'Legal Resources'",
-                                     f7Accordion(h4("Legal Resources"), multiCollapse = T,
-                                                 mod_Accordion_ui('Legal_UPD'),
-                                                 mod_Accordion_ui('LEGAL_SLS'),
-                                                 mod_Accordion_ui('LEGAL_LegalAID'),
-                                                 mod_Accordion_ui('Legal_RISSE')
-
-                                     )),
-
-# Hotlines ----------------------------------------------------------------
-
-
-                    conditionalPanel("input.PMHselector == 'Hotlines'",
-                                     f7Accordion(h4("Hotlines"), multiCollapse = T,
-                                                 mod_Accordion_ui('HL_FindAHelpline'),
-                                                 mod_Accordion_ui('HL_SuicideLifeline'),
-                                                 mod_Accordion_ui('Hotline_NYSQuitline'),
-                                                 mod_Accordion_ui('HL_NYSsupport'),
-                                                 mod_Accordion_ui('HL_NYSsexassaultHL'),
-                                                 mod_Accordion_ui('HL_CARELine'),
-                                                 mod_Accordion_ui('HL_CHAMP'),
-                                                 mod_Accordion_ui('HL_RAINN'),
-                                                 mod_Accordion_ui('HL_SmokersQuit'),
-                                                 mod_Accordion_ui('HL_NYSgamb'),
-                                                 mod_Accordion_ui('HL_NtnlGAMB'),
-                                                 mod_Accordion_ui('211_NE')
-                                     )),
-                    br(),
-
-                  ))
-
-
-              )
             ),
 
 
@@ -511,7 +237,7 @@ conditionalPanel("input.PMHselector == 'Interpartner Violence'",
           #         hover = TRUE,
           #         f7Card(f7Align(h3("Step 1"), side=c("left")),
           #                f7Align(h4("Schedule and attend an appointment with a Navigator"), side=c("left")),
-          #                f7Align(div(f7Link("Schedule a Navigator Appointment", href="https://calendly.com/d/g6j-syy-7z5")),side=c("left")),
+          #                f7Align(div(f7Link("Schedule a Navigator Appointment", href="https://ualbanyprojectaccess.shinyapps.io/ACCESSLandingPage")),side=c("left")),
           #                hr(),
           #                f7Align(h3("Step 2"), side=c("left")),
           #                f7Align(h4("Complete the 10-minute survey sent via email before your appointment"), side=c("left")),
