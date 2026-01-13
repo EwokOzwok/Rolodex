@@ -11,6 +11,7 @@ app_server <- function(input, output, session) {
   resources = data
   items <- reactiveVal(NULL)
 
+
   # shinyOptions(cache = cachem::cache_mem(max_size = 500e6))
   # Welcome Page ------------------------------------------------------------
   observeEvent(input$helppopup, {
