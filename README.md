@@ -6,7 +6,7 @@ A mobile-first Shiny application providing UAlbany students with comprehensive o
 
 The Project ACCESS Resource Rolodex is part of an innovative translational research initiative at the University at Albany, funded by a federal grant from the Substance Abuse and Mental Health Services Administration (SAMHSA). Our mission is to help students find and access resources and services that support their success and wellbeing.
 
-**Access the app at: [https://cliniciansfirst.online](https://cliniciansfirst.online)**
+**Access the app at: [https://ualbanyprojectaccess.shinyapps.io/Rolodex](https://ualbanyprojectaccess.shinyapps.io/Rolodex)**
 
 ## ✨ Features
 
@@ -43,7 +43,7 @@ install.packages(c(
 
 1. **Clone the repository**
 ```bash
-   git clone https://github.com/yourusername/project-access-rolodex.git
+   git clone https://github.com/ewokozwok/project-access-rolodex.git
    cd project-access-rolodex
 ```
 
